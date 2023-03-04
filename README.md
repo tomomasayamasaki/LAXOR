@@ -1,1 +1,1 @@
-# LAXOR
+# LAXOR Simulator
