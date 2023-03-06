@@ -12,15 +12,16 @@
 ![](https://img.shields.io/github/last-commit/tomomasayamasaki/LAXOR)
 ![](https://img.shields.io/github/languages/count/tomomasayamasaki/LAXOR)
 
+## Contents
+- Introduction
+- Licence
+
+## Introduction
 We design a python-based simulator for the proposed LAXOR accelerator. The purpose of the simulator is to
 - (1) map and verify the functionality of a BNN model onto the proposed architecture
 - (2) generate application-specific, cycle-accurate results (e.g., latency, energy, utilization, etc.) for design analysis.
 
 <p align="center"><img width=80% src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/fig1.png"></p>
-
-## Contents
-
-
 
 ## Licence
 
