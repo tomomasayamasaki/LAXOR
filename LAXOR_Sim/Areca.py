@@ -29,7 +29,7 @@ import LAXOR_Sim.Tool as tool
 import LAXOR_Sim.Config as config
 import os
 
-class Biscotto():
+class Areca():
 
 
     def __init__(self):

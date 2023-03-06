@@ -1,0 +1,689 @@
+
+
+               ██╗      █████╗ ██╗  ██╗ ██████╗ ██████╗                    
+               ██║     ██╔══██╗╚██╗██╔╝██╔═══██╗██╔══██╗                   
+               ██║     ███████║ ╚███╔╝ ██║   ██║██████╔╝                   
+               ██║     ██╔══██║ ██╔██╗ ██║   ██║██╔══██╗                   
+               ███████╗██║  ██║██╔╝ ██╗╚██████╔╝██║  ██║                   
+               ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝                   
+███████╗██╗███╗   ███╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ 
+██╔════╝██║████╗ ████║██║   ██║██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗
+███████╗██║██╔████╔██║██║   ██║██║     ███████║   ██║   ██║   ██║██████╔╝
+╚════██║██║██║╚██╔╝██║██║   ██║██║     ██╔══██║   ██║   ██║   ██║██╔══██╗
+███████║██║██║ ╚═╝ ██║╚██████╔╝███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║
+╚══════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+
+CONFIGURATION
+LOG FILE NAME: Output.txt
+RUN DATE: 2023-03-06 22:33:16
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ The No. of PEs         :  256 [PE]
++ The Size of PE         : 1024 [bits]
++ The No. of I/O         :    8 [pins]
++ Buffer size for INPUT  : 1024 [bits]
++ Buffer size for WEIGHT : 1024 [bits]
++ Buffer size for BIAS   :    9 [bits]
++ EPSILON for BatchNorm  :    0
++ The No. of labels      :   10 [labels]
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+██ No. 1 Layer ██ Binary Convolution (CPU)
+*** OUTPUT INFO ***
+ Shape                     : torch.Size([1, 64, 31, 31])
+---------------------------------------------
+
+
+
+██ No. 2 Layer ██ Binary Convolution   ██
+Mapping: Part_PE (1 PE for one convolution)
+PE Utilization Rate:      25.00 %
+Computation Round
+    1    :  64/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :      1145 cycles
+    * Load weights         :      1.48 % (    17.00)
+    * Load input           :     19.65 % (   225.00)
+    * Run PE               :     78.60 % (   900.00)
+    * Run BNA              :      0.26 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  292.5951 nJ
+    * computation energy   :  290.3619 nJ
+    * data movement energy :    2.2333 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 64, 30, 30)
+---------------------------------------------
+
+
+
+██ No. 3 Layer ██ Binary Convolution   ██
+Mapping: Part_PE (1 PE for one convolution)
+PE Utilization Rate:      50.00 %
+Computation Round
+    1    : 128/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :      1088 cycles
+    * Load weights         :      3.03 % (    33.00)
+    * Load input           :     19.39 % (   211.00)
+    * Run PE               :     77.30 % (   841.00)
+    * Run BNA              :      0.28 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  544.9255 nJ
+    * computation energy   :  542.6541 nJ
+    * data movement energy :    2.2714 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 128, 29, 29)
+---------------------------------------------
+
+
+
+██ No. 4 Layer ██ Binary Convolution   ██
+Mapping: Part_PE (1 PE for one convolution)
+PE Utilization Rate:      50.00 %
+Computation Round
+    1    : 128/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :      1016 cycles
+    * Load weights         :      3.25 % (    33.00)
+    * Load input           :     19.29 % (   196.00)
+    * Run PE               :     77.17 % (   784.00)
+    * Run BNA              :      0.30 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  508.0167 nJ
+    * computation energy   :  505.8749 nJ
+    * data movement energy :    2.1418 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 128, 28, 28)
+---------------------------------------------
+
+
+
+██ No. 5 Layer ██ Max Pooling          ██
+
+---------------------------------------------
+*** CYCLE COUNT ***
+ TOTAL for this layer      :       417 cycles
+    * Load input           :      6.00 % (    25.00)
+    * Run MaxPool          :     94.00 % (   392.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :    0.2794 nJ
+    * computation energy   :    0.0567 nJ
+    * data movement energy :    0.2228 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 128, 14, 14)
+---------------------------------------------
+
+
+
+██ No. 6 Layer ██ Binary Convolution   ██
+Mapping: Part_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       281 cycles
+    * Load weights         :     23.49 % (    66.00)
+    * Load input           :     15.30 % (    43.00)
+    * Run PE               :     60.14 % (   169.00)
+    * Run BNA              :      1.07 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  219.1823 nJ
+    * computation energy   :   218.094 nJ
+    * data movement energy :    1.0883 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 13, 13)
+---------------------------------------------
+
+
+
+██ No. 7 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       249 cycles
+    * Load weights         :     26.51 % (    66.00)
+    * Load input           :     14.46 % (    36.00)
+    * Run PE               :     57.83 % (   144.00)
+    * Run BNA              :      1.20 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  186.8631 nJ
+    * computation energy   :  185.8316 nJ
+    * data movement energy :    1.0315 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 12, 12)
+---------------------------------------------
+
+
+
+██ No. 8 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       221 cycles
+    * Load weights         :     29.86 % (    66.00)
+    * Load input           :     14.03 % (    31.00)
+    * Run PE               :     54.75 % (   121.00)
+    * Run BNA              :      1.36 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  157.1294 nJ
+    * computation energy   :  156.1502 nJ
+    * data movement energy :    0.9792 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 11, 11)
+---------------------------------------------
+
+
+
+██ No. 9 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+    2    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       387 cycles
+    * Load weights         :     33.85 % (   131.00)
+    * Load input           :     12.92 % (    50.00)
+    * Run PE               :     51.68 % (   200.00)
+    * Run BNA              :      1.55 % (     6.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :   259.735 nJ
+    * computation energy   :  258.0994 nJ
+    * data movement energy :    1.6356 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 512, 10, 10)
+---------------------------------------------
+
+
+
+██ No.10 Layer ██ Binary Convolution   ██
+Mapping: Multi_PE (2 PEs for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+    2    : 256/256 PEs
+    3    : 256/256 PEs
+    4    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :      1084 cycles
+    * Load weights         :     24.17 % (   262.00)
+    * Load input           :     14.94 % (   162.00)
+    * Run PE               :     59.78 % (   648.00)
+    * Run BNA              :      1.11 % (    12.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :   839.427 nJ
+    * computation energy   :  836.2422 nJ
+    * data movement energy :    3.1848 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 512, 9, 9)
+---------------------------------------------
+
+
+
+██ No.11 Layer ██ Binary Convolution   ██
+Mapping: Multi_PE (2 PEs for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+    2    : 256/256 PEs
+    3    : 256/256 PEs
+    4    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       914 cycles
+    * Load weights         :     28.67 % (   262.00)
+    * Load input           :     14.00 % (   128.00)
+    * Run PE               :     56.02 % (   512.00)
+    * Run BNA              :      1.31 % (    12.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  663.8421 nJ
+    * computation energy   :  660.7346 nJ
+    * data movement energy :    3.1075 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 512, 8, 8)
+---------------------------------------------
+
+
+
+██ No.12 Layer ██ Max Pooling          ██
+
+---------------------------------------------
+*** CYCLE COUNT ***
+ TOTAL for this layer      :        72 cycles
+    * Load input           :     11.11 % (     8.00)
+    * Run MaxPool          :     88.89 % (    64.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :    0.0912 nJ
+    * computation energy   :    0.0185 nJ
+    * data movement energy :    0.0727 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 512, 4, 4)
+---------------------------------------------
+
+
+
+██ No.13 Layer ██ Binary Convolution   ██
+Mapping: Multi_PE (2 PEs for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+    2    : 256/256 PEs
+    3    : 256/256 PEs
+    4    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       364 cycles
+    * Load weights         :     71.98 % (   262.00)
+    * Load input           :      4.95 % (    18.00)
+    * Run PE               :     19.78 % (    72.00)
+    * Run BNA              :      3.30 % (    12.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :   95.7733 nJ
+    * computation energy   :   92.9158 nJ
+    * data movement energy :    2.8575 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 512, 3, 3)
+---------------------------------------------
+
+
+
+██ No.14 Layer ██ Binary Convolution   ██
+Mapping: Multi_PE (2 PEs for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+    2    : 256/256 PEs
+    3    : 256/256 PEs
+    4    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       314 cycles
+    * Load weights         :     83.44 % (   262.00)
+    * Load input           :      2.55 % (     8.00)
+    * Run PE               :     10.19 % (    32.00)
+    * Run BNA              :      3.82 % (    12.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :   44.1306 nJ
+    * computation energy   :   41.2959 nJ
+    * data movement energy :    2.8347 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 512, 2, 2)
+---------------------------------------------
+
+
+
+██ No.15 Layer ██ Binary Convolution   ██
+Mapping: Multi_PE (2 PEs for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+    2    : 256/256 PEs
+    3    : 256/256 PEs
+    4    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       284 cycles
+    * Load weights         :     92.25 % (   262.00)
+    * Load input           :      0.70 % (     2.00)
+    * Run PE               :      2.82 % (     8.00)
+    * Run BNA              :      4.23 % (    12.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :   13.1451 nJ
+    * computation energy   :    10.324 nJ
+    * data movement energy :    2.8211 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 512, 1, 1)
+---------------------------------------------
+
+
+
+
+NEXT SIMULATOR RUNNING RESULT
+##################################################################
+##################################################################
+##################################################################
+
+
+               ██╗      █████╗ ██╗  ██╗ ██████╗ ██████╗                    
+               ██║     ██╔══██╗╚██╗██╔╝██╔═══██╗██╔══██╗                   
+               ██║     ███████║ ╚███╔╝ ██║   ██║██████╔╝                   
+               ██║     ██╔══██║ ██╔██╗ ██║   ██║██╔══██╗                   
+               ███████╗██║  ██║██╔╝ ██╗╚██████╔╝██║  ██║                   
+               ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝                   
+███████╗██╗███╗   ███╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ 
+██╔════╝██║████╗ ████║██║   ██║██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗
+███████╗██║██╔████╔██║██║   ██║██║     ███████║   ██║   ██║   ██║██████╔╝
+╚════██║██║██║╚██╔╝██║██║   ██║██║     ██╔══██║   ██║   ██║   ██║██╔══██╗
+███████║██║██║ ╚═╝ ██║╚██████╔╝███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║
+╚══════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+
+CONFIGURATION
+LOG FILE NAME: Output.txt
+RUN DATE: 2023-03-06 22:35:35
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ The No. of PEs         :  256 [PE]
++ The Size of PE         : 1024 [bits]
++ The No. of I/O         :    8 [pins]
++ Buffer size for INPUT  : 1024 [bits]
++ Buffer size for WEIGHT : 1024 [bits]
++ Buffer size for BIAS   :    9 [bits]
++ EPSILON for BatchNorm  :    0
++ The No. of labels      :   10 [labels]
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+██ No. 1 Layer ██ Binary Convolution (CPU)
+*** OUTPUT INFO ***
+ Shape                     : torch.Size([1, 256, 31, 31])
+---------------------------------------------
+
+
+
+██ No. 2 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 31, 31)
+---------------------------------------------
+
+
+
+██ No. 3 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :      1194 cycles
+    * Load weights         :      5.53 % (    66.00)
+    * Load input           :     18.84 % (   225.00)
+    * Run PE               :     75.38 % (   900.00)
+    * Run BNA              :      0.25 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     : 1164.1975 nJ
+    * computation energy   : 1161.4475 nJ
+    * data movement energy :      2.75 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 30, 30)
+---------------------------------------------
+
+
+
+██ No. 4 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 30, 30)
+---------------------------------------------
+
+
+
+██ No. 5 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :      1121 cycles
+    * Load weights         :      5.89 % (    66.00)
+    * Load input           :     18.82 % (   211.00)
+    * Run PE               :     75.02 % (   841.00)
+    * Run BNA              :      0.27 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  1087.924 nJ
+    * computation energy   : 1085.3082 nJ
+    * data movement energy :    2.6159 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 29, 29)
+---------------------------------------------
+
+
+
+██ No. 6 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 29, 29)
+---------------------------------------------
+
+
+
+██ No. 7 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :      1049 cycles
+    * Load weights         :      6.29 % (    66.00)
+    * Load input           :     18.68 % (   196.00)
+    * Run PE               :     74.74 % (   784.00)
+    * Run BNA              :      0.29 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     : 1014.2361 nJ
+    * computation energy   : 1011.7498 nJ
+    * data movement energy :    2.4863 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 28, 28)
+---------------------------------------------
+
+
+
+██ No. 8 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 28, 28)
+---------------------------------------------
+
+
+
+██ No. 9 Layer ██ Max Pooling          ██
+
+---------------------------------------------
+*** CYCLE COUNT ***
+ TOTAL for this layer      :       441 cycles
+    * Load input           :     11.11 % (    49.00)
+    * Run MaxPool          :     88.89 % (   392.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :    0.5588 nJ
+    * computation energy   :    0.1133 nJ
+    * data movement energy :    0.4455 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 14, 14)
+---------------------------------------------
+
+
+
+██ No.10 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       281 cycles
+    * Load weights         :     23.49 % (    66.00)
+    * Load input           :     15.30 % (    43.00)
+    * Run PE               :     60.14 % (   169.00)
+    * Run BNA              :      1.07 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  219.1823 nJ
+    * computation energy   :   218.094 nJ
+    * data movement energy :    1.0883 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 13, 13)
+---------------------------------------------
+
+
+
+██ No.11 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 13, 13)
+---------------------------------------------
+
+
+
+██ No.12 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       249 cycles
+    * Load weights         :     26.51 % (    66.00)
+    * Load input           :     14.46 % (    36.00)
+    * Run PE               :     57.83 % (   144.00)
+    * Run BNA              :      1.20 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :  186.8631 nJ
+    * computation energy   :  185.8316 nJ
+    * data movement energy :    1.0315 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 12, 12)
+---------------------------------------------
+
+
+
+██ No.13 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 12, 12)
+---------------------------------------------
+
+
+
+██ No.14 Layer ██ Max Pooling          ██
+
+---------------------------------------------
+*** CYCLE COUNT ***
+ TOTAL for this layer      :        81 cycles
+    * Load input           :     11.11 % (     9.00)
+    * Run MaxPool          :     88.89 % (    72.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :    0.1026 nJ
+    * computation energy   :    0.0208 nJ
+    * data movement energy :    0.0818 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 6, 6)
+---------------------------------------------
+
+
+
+██ No.15 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :       101 cycles
+    * Load weights         :     65.35 % (    66.00)
+    * Load input           :      6.93 % (     7.00)
+    * Run PE               :     24.75 % (    25.00)
+    * Run BNA              :      2.97 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :   33.0234 nJ
+    * computation energy   :   32.2624 nJ
+    * data movement energy :     0.761 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 5, 5)
+---------------------------------------------
+
+
+
+██ No.16 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 5, 5)
+---------------------------------------------
+
+
+
+██ No.17 Layer ██ Binary Convolution   ██
+Mapping: Single_PE (1 PE for one convolution)
+PE Utilization Rate:     100.00 %
+Computation Round
+    1    : 256/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT *** 
+ TOTAL for this layer      :        89 cycles
+    * Load weights         :     74.16 % (    66.00)
+    * Load input           :      4.49 % (     4.00)
+    * Run PE               :     17.98 % (    16.00)
+    * Run BNA              :      3.37 % (     3.00)
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :   21.3885 nJ
+    * computation energy   :    20.648 nJ
+    * data movement energy :    0.7405 nJ*** OUTPUT INFO ***
+ Shape                     : (1, 256, 4, 4)
+---------------------------------------------
+
+
+
+██ No.18 Layer ██ Batch Normalization  ██
+*** OUTPUT INFO ***
+ Shape                     : (1, 256, 4, 4)
+---------------------------------------------
+
+
+
+██ No.19 Layer ██ Binary Fully Connected ██
+Mapping: Multi_PE (4 PEs for one convolution)
+PE Utilization Rate:      15.62 %
+Computation Round
+    1    :  40/256 PEs
+
+---------------------------------------------
+*** CYCLE COUNT ***
+ TOTAL for this layer      :        22 cycles
+    * Load weights         :     50.00 % (    11.00)
+    * Load input           :      4.55 % (     1.00)
+    * Run PE               :      4.55 % (     1.00)
+    * Comparison           :     40.91 % (     9.00)
+
+ TOTAL                     :      4628 cycles
+    * Load weights         :     10.22 %
+    * Load input           :     16.88 %
+    * Run PE               :     62.23 % (  2880.00cycle)
+    * Run MaxPool          :     10.03 %
+    * Comparison           :      0.19 %
+---------------------------------------------
+*** PERFORMANCE ***
+ TOTAL Latency             :    0.0231 ms
+---------------------------------------------
+*** ESTIMATED ENERGY  *** 
+ Energy for this layer     :    0.3179 nJ
+    * computation energy   :    0.1859 nJ
+    * data movement energy :    0.1319 nJ
+---------------------------------------------
+
+
+ENERGY CONSUMPTION FOR YOUR MODEL
++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Dynamic Energy            :  3.727794 uJ        +
++    * computation energy   :    3.715662 uJ      +
++    * data movement energy :    0.012133 uJ      +
++ leakage Energy            :  0.092599 uJ        +
++ Total Energy              :  3.820393 uJ        +
++                                                 +
++ PERCENTAGE                                      +
++    * computation energy   :     99.67 %         +
++    * data movement energy :      0.33 %         +
++++++++++++++++++++++++++++++++++++++++++++++++++++
+*** OUTPUT INFO ***
+ Shape                     : (1, 10)
+---------------------------------------------
+
+
+
+
+++++++++++++++++++++++++++
++  Classified Result: 3  +
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
++  PE Utilization: 89.45% +
+++++++++++++++++++++++++++
