@@ -12,6 +12,8 @@
 ![](https://img.shields.io/github/last-commit/tomomasayamasaki/LAXOR)
 ![](https://img.shields.io/github/languages/count/tomomasayamasaki/LAXOR)
 
+![gif](https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR.gif)
+
 ## Contents
 - Introduction
 - Licence
