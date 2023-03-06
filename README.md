@@ -1,3 +1,4 @@
+<p align="center"><img width=12.5% src="https://github.com/anfederico/clairvoyant/blob/master/media/Logo.png"></p>
 
 # LAXOR: A Scalable BNN Accelerator with Latch-XOR Logic for Local Computing
   
