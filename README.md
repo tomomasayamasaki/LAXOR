@@ -101,6 +101,13 @@ The LAXOR simulator consists of a front-end tool, Areca, and a back-end tool,Bit
 
     A program to run the LAXOR accelerator simulator with the pre-trained binary CNN model for CIFAR-10.
 
+## 🟨 Installation Requirements
+- Python version3
+- datetime
+- matplotlib
+- torch
+- numpy
+
 ## 🟨 How to Run
 ### ◼️ Areca platform
 #### Import Areca
@@ -238,6 +245,12 @@ LEAK_DM_LOAD_CONTROL = 31.4090625 # load control
 CLOCK_PERIOD = 0.000000005
 ```
 
+## 🟨 Citing LAXOR accelerator and simulator
+
+If you use BoTorch, please cite the following paper:
+```
+Paper information
+```
 
 ## 🟨 Licence
 
