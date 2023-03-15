@@ -16,6 +16,8 @@
 
 ## 🟨 Contents
 - [Introduction](https://github.com/tomomasayamasaki/LAXOR#-introduction)
+    - [LAXOR Accelerator](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor-accelerator)
+    - [LAXOR Accelerator Simulator](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor-accelerator-simulator)
 - [Repogitory File Structure](https://github.com/tomomasayamasaki/LAXOR#-repository-file-structure)
 - [Licence](https://github.com/tomomasayamasaki/LAXOR#-licence)
 
@@ -70,7 +72,27 @@ The LAXOR simulator consists of a front-end tool, Areca, and a back-end tool,Bit
 <p align="center"><img width=80% src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/fig1.png"></p>
 
 ## 🟨 Repository File Structure
+### ◼️ LAXOR_Sim
+#### Areca (Front-end)
+- [Areca.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Areca.py)
 
+#### Bits-Island (Back-end)
+- [Accelerator.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Accelerator.py)
+- [Cycle_count.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Config.py)
+- [Energy.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Energy.py)
+- [PE.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/PE.py)
+- [Performance.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Performance.py)
+
+#### others
+- [Config.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Config.py)
+- [Tool.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Tool.py)
+    
+
+- Pre-trained_model
+
+    Pre-trained model of Binary CNN for CIFAR-10, which the accuracy is 85.25%, the total enegy is 3.82$uJ$, and the model size is 0.51$MB$.
+    
+- [Example_simple.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/Example_simple.py)
 
 
 ## 🟨 Licence
