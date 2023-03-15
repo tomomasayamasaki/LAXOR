@@ -2,7 +2,7 @@
     <img src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/logo.png" alt="Tomo logo" title="Tomo" align="right" height="110" />
 </a>
 
-# LAXOR: A Scalable BNN Accelerator with Latch-XOR Logic for Local Computing
+# LAXOR: A BNN Accelerator with Latch-XOR Logic for Local Computing
   
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
