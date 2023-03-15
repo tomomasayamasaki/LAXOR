@@ -15,9 +15,9 @@
 ![gif](https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR.gif)
 
 ## 🟨 Contents
-- [Introduction](#introduction)
-- [Repogitory File Structure](#repogitory_file_structure)
-- [Licence](#licence)
+- [Introduction](https://github.com/tomomasayamasaki/LAXOR#-introduction)
+- [Repogitory File Structure](https://github.com/tomomasayamasaki/LAXOR#-repository-file-structure)
+- [Licence](https://github.com/tomomasayamasaki/LAXOR#-licence)
 
 ## 🟨 Introduction
 ### ◼️ LAXOR Accelerator
