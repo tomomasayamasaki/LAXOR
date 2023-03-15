@@ -254,7 +254,7 @@ CLOCK_PERIOD = 0.000000005
 
 ## 🟨 Citing LAXOR accelerator and simulator
 
-If you use BoTorch, please cite the following paper:
+If you use LAXOR, please cite the following paper:
 ```
 Paper information
 ```
