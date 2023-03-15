@@ -87,12 +87,79 @@ The LAXOR simulator consists of a front-end tool, Areca, and a back-end tool,Bit
 - [Config.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Config.py)
 - [Tool.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/LAXOR_Sim/Tool.py)
     
+### ◼️ Program and pre-trained model for test running 
 
 - Pre-trained_model
 
-    Pre-trained model of Binary CNN for CIFAR-10, which the accuracy is 85.25%, the total enegy is 3.82$uJ$, and the model size is 0.51$MB$.
+    Pre-trained model of Binary CNN for CIFAR-10, which the accuracy is 85.25%, the total enegy is 3.82 $uJ$, and the model size is 0.51 $MB$.
     
 - [Example_simple.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/Example_simple.py)
+
+    A program to run the LAXOR accelerator simulator with random weights.
+
+- [main.py](https://github.com/tomomasayamasaki/LAXOR/blob/main/main.py)
+
+    A program to run the LAXOR accelerator simulator with the pre-trained binary CNN model for CIFAR-10.
+
+## 🟨 How to Run
+### ◼️ Areca platform
+#### Import Areca
+```python
+from LAXOR_Sim.Areca import Areca
+```
+
+#### Initilaize Areca
+```python
+areca = Areca()
+```
+
+#### Binarized Convolution layer not computed by LAXOR accelerator
+```python
+# If you want to run a batch normalization after convolution, select BatchNorm='ON' and add parameters for batch normalization by numpy array format.
+# input: numpy array
+# weights: numpy array
+# bias: numpy array
+# padding: int
+
+out = areca.CPU_Binary_Conv2D(input, weights, bias, padding=0, BatchNorm='OFF', BN_gamma=None, BN_beta=None, BN_mean=None, BN_std=None)
+```
+
+#### Binarized Convolution layer computed by LAXOR accelerator
+```python
+# If you want to run a batch normalization after convolution, select BatchNorm='ON' and add parameters for batch normalization by numpy array format.
+# input: numpy array
+# weights: numpy array
+# bias: numpy array
+# stride: int
+# padding: int
+
+out = areca.Binary_Conv2D(input, weights, bias, stride=1, padding=0, BatchNorm='OFF', BN_gamma=None, BN_beta=None, BN_mean=None, BN_std=None)
+```
+
+#### Binarized Fullyconnected layer
+```python
+# If you want to run a batch normalization after convolution, select BatchNorm='ON' and add parameters for batch normalization by numpy array format.
+# input: numpy array
+# weights: numpy array
+# bias: numpy array
+
+out = areca.Binary_FullyConnected(input, weights, bias, BatchNorm='OFF', BN_gamma=None, BN_beta=None, BN_mean=None, BN_std=None)
+```
+
+#### Max pooling layer
+```python
+# input: numpy array
+# ksize: int
+# stride: int
+
+out = areca.MaxPooling(input, ksize, stride)
+```
+
+
+
+```python
+
+```
 
 
 ## 🟨 Licence
