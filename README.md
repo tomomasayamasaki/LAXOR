@@ -14,11 +14,16 @@
 
 ![gif](https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR.gif)
 
-## Contents
+## 🟨 Contents
 - [Introduction](#introduction)
 - [Licence](#licence)
 
-## Introduction
+## 🟨 Introduction
+### ◼️ LAXOR Accelerator
+LAXOR is an Binary Neural Network accelerator proposed by a group of people from [Singapore Univerisity of Technology and Design](https://www.sutd.edu.sg/) (SUTD) and [Institute of Microelectronics](https://www.a-star.edu.sg/ime/) (IME), Agency for Science, Technology and Research (A*STAR). The essence of LAXOR lies in a novel local computing paradigm that fuses the weight storage (i.e., latch) and the compute unit (i.e., XOR gate) in a single logic to minimize data movement, achieving 4.2× lower energy consumption. Assisted with the optimized population count circuits, LAXOR accelerator obtains an energy efficiency of 2299 T OPS/W , 3.4× ∼ 37.6× higher compared to the advanced BNN accelerator architectures
+
+
+### ◼️ LAXOR Accelerator Simulator
 We design a python-based simulator for the proposed LAXOR accelerator. The purpose of the simulator is to
 - (1) map and verify the functionality of a BNN model onto the proposed architecture
 - (2) generate application-specific, cycle-accurate results (e.g., latency, energy, utilization, etc.) for design analysis.
@@ -27,6 +32,6 @@ The LAXOR simulator consists of a front-end tool, Areca, and a back-end tool,Bit
 
 <p align="center"><img width=80% src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/fig1.png"></p>
 
-## Licence
+## 🟨 Licence
 
 [MIT license](https://en.wikipedia.org/wiki/MIT_License).
