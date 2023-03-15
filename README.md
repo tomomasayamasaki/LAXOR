@@ -19,6 +19,13 @@
     - [LAXOR Accelerator](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor-accelerator)
     - [LAXOR Accelerator Simulator](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor-accelerator-simulator)
 - [Repogitory File Structure](https://github.com/tomomasayamasaki/LAXOR#-repository-file-structure)
+    - [LAXOR_Sim](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-laxor_sim)
+    - [Program and pre-trained model for test running](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-program-and-pre-trained-model-for-test-running)
+- [Installation Requirements](https://github.com/tomomasayamasaki/LAXOR#-installation-requirements)
+- [How to Run](https://github.com/tomomasayamasaki/LAXOR#-how-to-run)
+    - [Areca platform](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-areca-platform)
+    - [Config](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-config)
+- [Citing LAXOR accelerator and simulator](https://github.com/tomomasayamasaki/LAXOR#-citing-laxor-accelerator-and-simulator)
 - [Licence](https://github.com/tomomasayamasaki/LAXOR#-licence)
 
 ## 🟨 Introduction
