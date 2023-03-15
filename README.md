@@ -155,10 +155,87 @@ out = areca.Binary_FullyConnected(input, weights, bias, BatchNorm='OFF', BN_gamm
 out = areca.MaxPooling(input, ksize, stride)
 ```
 
-
-
+### ◼️ Config
+#### The name of log file
 ```python
+LOG_FILE = 'Output.txt'
+```
 
+#### Number of PEs (XOR & Popcount)
+```python
+PENUMS = 256
+```
+
+#### Bit size of PE (XOR & Popcount)
+```python
+BIT_SIZE_PE = 1024 #bit
+```
+
+#### OR Logic
+```python
+ORNUMS = 256 # number of OR-Logic
+ORBITWIDTH = 4 # Bit width of OR-Logic
+```
+
+#### Buffer size
+```python
+# input buffer
+BUFFERSIZE_INPUT = 1024 #bits
+# weights buffer
+BUFFERSIZE_WEIGHTS = 1024 #bits
+# bias buffer
+BUFFERSIZE_BIAS = 9 # bits
+```
+
+#### The number of pins for input or weights buffer
+```python
+PINS_IW = 8
+```
+
+#### Parameter of Batch normalization
+```python
+EPSILON = 0
+```
+
+#### Number of labels
+```python
+NUM_LABELS = 10
+```
+
+#### Unit dynamic energy
+```python
+## Computation
+ENERGY_POPCOUNT = 0.00054075 # popcount
+ENERGY_XOR = 2.7124E-07 #xor
+ENERGY_OR = 2.25811E-06 # OR logic
+ENERGY_BNA = 0.000437255 # batch normalization and activation
+ENERGY_COMPARISON = 5.9293E-05 # Comparison
+
+## Data movement
+ENERGY_DM_READ_BUFFER_IW = 2.21987E-06 # read from buffer
+ENERGY_DM_LOAD_PE = 4.08203E-07 # load data to PE
+ENERGY_DM_REAM_BUFFER_BIAS = 5.01043E-06 # read from bias buffer
+ENERGY_DM_LOAD_CONTROL = 5.9393E-05 # load control
+```
+
+#### Unit leakage energy
+```python
+# Computation
+LEAK_POPCOUNT = 500 # popcount
+LEAK_XOR = 10.25390625 # xor
+LEAK_OR = 24.63866016 # OR logic
+LEAK_BNA = 791.7637969 # batch normalization and activation
+LEAK_COMPARISON = 509.1364333 # comparison
+
+## Data movement
+LEAK_DM_READ_BUFFER_IW = 23.25170117 # read from buffer
+LEAK_DM_REAM_BUFFER_BIAS = 14.56696875 # read from bias
+LEAK_DM_LOAD_CONTROL = 31.4090625 # load control
+```
+
+#### Clock period
+```python
+CLOCK_PERIOD = 0.000000005
 ```
 
 
