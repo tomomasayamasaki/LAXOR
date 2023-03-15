@@ -50,8 +50,14 @@ Example: a 3D $3×3×C$ Kernel. (Detail is on our paper)
 <p align="center"><img width=80% src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR_Mapping2.png"></p>
 
 #### Compact 10-Transistor Latch-XOR Computing Cell
+On LAXOR accelerator, the bitwise multiplication efficiently with an inverted-XOR gate is implemented. Besides, the accumulation can be realized by a population count logic (i.e., popcount logic), which counts the number of '0' of the XOR output. Also, LAXOR accelerator consists of a proposed tightly coupled 10T Latch-XOR cell in which  the computation is in-situ with the data storage for local computing. It comprises a transmission gate, a cross-coupled latch, a two-transistor (i.e., M1, M2) switching path, and an inverter.
+
+<p align="center"><img width=80% src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR_10TXOR.png"></p>
 
 #### Popcount Unit PCL Design
+To further reduce data movement, we combine an array of 1024 Latch-XOR cells together with a Parallel-counter-Carry-Look-ahead (PCL) unit and a computation and activation unit to form a PE. This tightly-coupled configuration allows for efficient counting of the ‘0’s from the output of the array and generating activations or partial sums for further operation. The figure of a PCL unit which is deploied on LAXOR accelerator as follow.
+
+<p align="center"><img width=80% src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR_PCL.png"></p>
 
 ### ◼️ LAXOR Accelerator Simulator
 We design a python-based simulator for the proposed LAXOR accelerator. The purpose of the simulator is to
