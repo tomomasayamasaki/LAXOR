@@ -169,6 +169,50 @@ out = areca.Binary_FullyConnected(input, weights, bias, BatchNorm='OFF', BN_gamm
 out = areca.MaxPooling(input, ksize, stride)
 ```
 
+### ◼️ Load pre-trained model
+This is one of examples to show how to load. User should store weights, input, bias, and some parameters into numpy array. The pre-trained model we provide is stored npy file. In order to load them, we use numpy.load().
+```python
+import LAXOR_Sim.Tool as tool
+
+w_path = './Pre-trained_model/Conv1_binary-weights.npy'
+bias_path = './Pre-trained_model/Conv1_bias.npy'
+beta_path = './Pre-trained_model/Conv1_BNbeta.npy'
+gamma_path = './Pre-trained_model/Conv1_BNgamma.npy'
+mean_path = './Pre-trained_model/Conv1_BNmean.npy'
+std_path = './Pre-trained_model/Conv1_BNstd.npy'
+
+w1, b1, beta1, gamma1, mean1, std1 = tool.load_npys(w_path, bias_path, beta_path, gamma_path, mean_path, std_path)
+```
+
+weights
+```python
+w_path = './Pre-trained_model/Conv1_binary-weights.npy'
+weights = np.load(w_path)
+print(weights)
+
+"""
+[[[[ 1  1]
+   [ 1  1]]
+
+  [[ 1 -1]
+   [ 1 -1]]
+
+  [[-1 -1]
+   [-1 -1]]]
+
+ ...
+
+ [[[ 1  1]
+   [ 1 -1]]
+
+  [[ 1 -1]
+   [-1 -1]]
+
+  [[ 1 -1]
+   [ 1  1]]]]
+"""
+```
+
 ### ◼️ Config
 #### The name of log file
 ```python
