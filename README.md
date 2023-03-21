@@ -184,7 +184,7 @@ std_path = './Pre-trained_model/Conv1_BNstd.npy'
 w1, b1, beta1, gamma1, mean1, std1 = tool.load_npys(w_path, bias_path, beta_path, gamma_path, mean_path, std_path)
 ```
 
-weights
+Weights for binarized convolution layer
 ```python
 w_path = './Pre-trained_model/Conv1_binary-weights.npy'
 weights = np.load(w_path)
@@ -210,6 +210,25 @@ print(weights)
 
   [[ 1 -1]
    [ 1  1]]]]
+"""
+```
+
+Bias for binarized convolution layer
+```python
+bias_path = './Pre-trained_model/Conv1_bias.npy'
+bias = np.load(bias_path)
+print(bias)
+
+"""
+[-1.53262466e-01 -8.07617307e-01 -5.98477423e-01  8.31361294e-01
+ -3.19540091e-02 -9.77912545e-02 -7.92104006e-01  1.63953304e-01
+ -7.66488433e-01  7.03036129e-01 -1.27875507e-01 -2.24554762e-01
+  4.48263705e-01 -1.31150529e-01 -1.73672631e-01 -1.33374967e-02
+   ...
+  1.89023882e-01 -2.55141824e-01 -8.33954439e-02  1.33623332e-02
+ -6.80823684e-01  1.56198531e-01  2.09271386e-01  1.42073661e-01
+ -1.16940970e-02  6.63392007e-01 -3.19188684e-01 -4.96945649e-01
+  1.12402477e-05 -1.28726274e-01 -6.90906346e-01  4.38432664e-01]
 """
 ```
 
@@ -294,6 +313,16 @@ LEAK_DM_LOAD_CONTROL = 31.4090625 # load control
 #### Clock period
 ```python
 CLOCK_PERIOD = 0.000000005
+```
+
+### ◼️ Run Example
+Example 1. Weights and bias are defined with random values
+```python
+python Example_simple.py
+```
+Example 2. program includes loading a pre-trained model for cifar10
+```python
+python main.py
 ```
 
 ## 🟨 Citing LAXOR accelerator and simulator
