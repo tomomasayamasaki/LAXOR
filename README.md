@@ -12,7 +12,7 @@
 ![](https://img.shields.io/github/last-commit/tomomasayamasaki/LAXOR)
 ![](https://img.shields.io/github/languages/count/tomomasayamasaki/LAXOR)
 
-![gif](https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR.gif)
+<img src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/LAXOR.gif" width="833" height="735"/>
 
 ## 🟨 Contents
 - [Introduction](https://github.com/tomomasayamasaki/LAXOR#-introduction)
