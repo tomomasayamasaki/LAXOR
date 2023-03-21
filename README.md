@@ -23,7 +23,7 @@
     - [Program and pre-trained model for test running](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-program-and-pre-trained-model-for-test-running)
 - [Installation Requirements](https://github.com/tomomasayamasaki/LAXOR#-installation-requirements)
 - [How to Run](https://github.com/tomomasayamasaki/LAXOR#-how-to-run)
-    - [Areca platform](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-areca-platform)]
+    - [Areca platform ](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-areca-platform)]
     - [Load pre-trained model](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-load-pre-trained-model)
     - [Config](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-config)
     - [Run Example](https://github.com/tomomasayamasaki/LAXOR#%EF%B8%8F-run-example)
