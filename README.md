@@ -33,7 +33,7 @@
 ## 🟨 Introduction
 ### ◼️ LAXOR Accelerator
 #### What is LAXOR Accelerator
-LAXOR is an Binary Neural Network accelerator proposed by a group of people from [Singapore Univerisity of Technology and Design](https://www.sutd.edu.sg/) (SUTD) and [Institute of Microelectronics](https://www.a-star.edu.sg/ime/) (IME), Agency for Science, Technology and Research (A*STAR). The essence of LAXOR lies in a novel local computing paradigm that fuses the weight storage (i.e., latch) and the compute unit (i.e., XOR gate) in a single logic to minimize data movement, achieving 4.2× lower energy consumption. Assisted with the optimized population count circuits, LAXOR accelerator obtains an energy efficiency of 2299 T OPS/W , 3.4× ∼ 37.6× higher compared to the advanced BNN accelerator architectures.   
+LAXOR is an Binary Neural Network accelerator. The essence of LAXOR lies in a novel local computing paradigm that fuses the weight storage (i.e., latch) and the compute unit (i.e., XOR gate) in a single logic to minimize data movement, achieving 4.2× lower energy consumption. Assisted with the optimized population count circuits, LAXOR accelerator obtains an energy efficiency of 2299 T OPS/W , 3.4× ∼ 37.6× higher compared to the advanced BNN accelerator architectures.   
 
 |   | LAXOR Accelerator |
 | ------------- | ------------- |
