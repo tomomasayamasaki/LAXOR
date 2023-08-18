@@ -6,7 +6,6 @@
   
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
-![](https://img.shields.io/github/downloads/tomomasayamasaki/LAXOR/total)
 ![](https://img.shields.io/github/repo-size/tomomasayamasaki/LAXOR)
 ![](https://img.shields.io/github/commit-activity/y/tomomasayamasaki/LAXOR)
 ![](https://img.shields.io/github/last-commit/tomomasayamasaki/LAXOR)
