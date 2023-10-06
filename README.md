@@ -332,7 +332,15 @@ python main.py
 
 If you use LAXOR, please cite the following paper:
 ```
-Paper information
+@INPROCEEDINGS{10244499,
+  author={Li, Dongrui and Yamasaki, Tomomasa and Mani, Aarthy and Do, Anh Tuan and Chen, Niangjun and Wang, Bo},
+  booktitle={2023 IEEE/ACM International Symposium on Low Power Electronics and Design (ISLPED)}, 
+  title={LAXOR: A Bit-Accurate BNN Accelerator with Latch-XOR Logic for Local Computing}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/ISLPED58423.2023.10244499}}
 ```
 
 ## 🟨 Licence
